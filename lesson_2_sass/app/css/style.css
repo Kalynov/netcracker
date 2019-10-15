@@ -1,0 +1,74 @@
+.nav-bar {
+  width: 400px;
+  position: relative;
+  margin: 100px auto; }
+  .nav-bar__button-wrap {
+    width: 100px;
+    height: 100px;
+    opacity: 0; }
+    .nav-bar__button-wrap:checked ~ .nav-bar__list {
+      opacity: 1; }
+  .nav-bar__button {
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 20px 0;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: blue; }
+  .nav-bar__list {
+    width: 300px;
+    height: 300px;
+    background-color: beige;
+    border: 2px solid grey;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+    .nav-bar__list::before {
+      content: "";
+      position: absolute;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 30px;
+      height: 30px;
+      border: 15px solid transparent;
+      border-bottom: 15px solid grey;
+      top: 79px; }
+    .nav-bar__list::after {
+      content: "";
+      position: absolute;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 30px;
+      height: 30px;
+      border: 15px solid transparent;
+      border-bottom: 15px solid beige;
+      top: 82px; }
+  .nav-bar__item {
+    width: 100%;
+    text-align: center;
+    height: 64px;
+    padding: 25px 0;
+    margin: 5px 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: gainsboro; }

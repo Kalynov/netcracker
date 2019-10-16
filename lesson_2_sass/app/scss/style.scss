@@ -2,11 +2,15 @@
   width: 400px;
   position: relative;
   margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
   &__button-wrap {
     width: 100px;
     height: 100px;
-    opacity: 0;
+    display: none;
     &:checked ~ .nav-bar__list {
       opacity: 1;
     }
@@ -20,9 +24,11 @@
     width: 100px;
     height: 100px;
     background-color: blue;
+    margin-bottom: 15px;
   }
 
   &__list {
+    position: relative;
     width: 300px;
     height: 300px;
     background-color: beige;
@@ -41,7 +47,7 @@
       height: 30px;
       border: 15px solid transparent;
       border-bottom:15px solid grey;
-      top: 79px;
+      bottom: 300px;
     }
 
     &::after {
@@ -52,7 +58,7 @@
       height: 30px;
       border: 15px solid transparent;
       border-bottom:15px solid beige;
-      top: 82px;
+      bottom: 297px;
     }
   }
 

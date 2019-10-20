@@ -1,0 +1,73 @@
+.nav-bar {
+  width: 400px;
+  position: relative;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar__button-wrap {
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+.nav-bar__button-wrap:checked ~ .nav-bar__list {
+  opacity: 1;
+}
+.nav-bar__button {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px 0;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.nav-bar__list {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: beige;
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s;  
+}
+.nav-bar__list::before {
+  content:"";
+  position: absolute;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 15px solid transparent;
+  border-bottom:15px solid grey;
+  bottom: 300px;
+}
+.nav-bar__list::after {
+  content:"";
+  position: absolute;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 15px solid transparent;
+  border-bottom:15px solid beige;
+  bottom: 297px;
+}
+
+
+.nav-bar__item {
+  width: 100%;
+  text-align: center;
+  height: 64px;
+  padding: 25px 0;
+  margin: 5px 0;
+  box-sizing: border-box;
+  background: gainsboro;
+}
